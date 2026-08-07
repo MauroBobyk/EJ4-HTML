@@ -1,98 +1,153 @@
 @charset "utf-8";
-/* CSS Document */
-
 
 *{
-	margin:0px;
-	border:0px;
-	padding:0px;
+	margin:0px; /* Elimina el margen externo de todos los elementos */
+	border:0px; /* Elimina el borde de todos los elementos */
+	padding:0px; /* Elimina el relleno interno de todos los elementos */
 	}
+
+/* ==============================================
+   BODY - Cuerpo de la página
+   ============================================== */
 body {
-	background-color: #000;
+	background-color: #000; /* Fondo negro para toda la página */
 	}
+
+/* ==============================================
+   #CONTENEDOR - Envuelve todo el contenido
+   ============================================== */
 #contenedor {
-	margin: auto;
-	height: auto;
-	width: 90%;	
+	margin: auto; /* Centra el contenedor horizontalmente */
+	height: auto; /* Altura automática, se adapta al contenido */
+	width: 90%; /* Ocupa el 90% del ancho de la ventana */
 	}
+
+/* ==============================================
+   #ENCABEZADO - Cabecera del sitio
+   ============================================== */
 #encabezado {
-	background-color: #FFF;
-	height: 100px;
-	background-image: url();
+	background-color: #FFF; /* Fondo blanco para la cabecera */
+	height: 100px; /* Alto fijo de 100 píxeles */
+	background-image: url(); /* Imagen de fondo (poner ruta entre paréntesis) */
 	}
+
+/* ==============================================
+   #ENCABEZADO UL - Menú de navegación
+   ============================================== */
 #encabezado ul {
-	float: right;
-	height: 40px;
-	width: 600px;
-	margin-top: 20px;
-	/*border: solid red 1px;*/
+	float: right; /* Flota el menú hacia la derecha del encabezado */
+	height: 40px; /* Alto de 40 píxeles para la barra del menú */
+	width: 600px; /* Ancho fijo de 600 píxeles para el menú */
+	margin-top: 20px; /* Separa el menú 20px del borde superior */
+	/*border: solid red 1px;*/ /* Borde comentado: era para debug visual */
 	}
+
+/* ==============================================
+   #ENCABEZADO UL LI - Cada ítem del menú
+   ============================================== */
 #encabezado ul li {
-	line-height: 40px;
-	text-align: center;
-	vertical-align: middle;
-	width: 148px;
-	list-style-type: none;
-	float: left;
+	line-height: 40px; /* Altura de línea de 40px, centra el texto verticalmente */
+	text-align: center; /* Centra el texto horizontalmente dentro del li */
+	vertical-align: middle; /* Alineación vertical al medio */
+	width: 148px; /* Cada ítem ocupa 148 píxeles de ancho */
+	list-style-type: none; /* Quita las viñetas (bolitas) de la lista */
+	float: left; /* Flota cada ítem a la izquierda para hacer menú horizontal */
 	}
+
+/* ==============================================
+   #ENCABEZADO UL LI A - Enlaces del menú
+   ============================================== */
 #encabezado ul li a {
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size: 14px;
-	font-weight: 600;
-	text-transform: uppercase;
-	color: #FFF;
-	text-decoration: none;
+	font-family: "Arial Black", Gadget, sans-serif; /* Fuente Arial Black, con alternativas */
+	font-size: 14px; /* Tamaño de letra de 14 píxeles */
+	font-weight: 600; /* Grosor de fuente semi-negrita (600) */
+	text-transform: uppercase; /* Convierte el texto a mayúsculas */
+	color: #FFF; /* Color de texto blanco */
+	text-decoration: none; /* Quita el subrayado de los enlaces */
 	}
+
+/* ==============================================
+   #BANNER - Sección del banner principal
+   ============================================== */
 #banner{
-	background-repeat: no-repeat;
-	background-position: center center;
-	height: 500px;
-	background-image: url();
+	background-repeat: no-repeat; /* La imagen de fondo no se repite */
+	background-position: center center; /* Centra la imagen horizontal y verticalmente */
+	height: 500px; /* Alto fijo de 500 píxeles */
+	background-image: url(img/Banner.jpg); /* Imagen de fondo del banner (poner ruta entre paréntesis) */
 }
 
+/* ==============================================
+   #CENTRO - Sección central con las 3 cajas
+   ============================================== */
 #centro {
-	background-color: #009;
-	height: 320px;
-	background-image: url();
+	background-color: #009; /* Fondo azul oscuro (#009) */
+	height: auto; /* Altura automática, se adapta al contenido de las cajas */
+	overflow: hidden; /* Fuerza al contenedor a envolver los elementos flotantes internos */
+	background-image: url(); /* Imagen de fondo (poner ruta entre paréntesis) */
 }
 
+/* ==============================================
+   .CAJAS - Cada una de las 3 cajas de contenido
+   ============================================== */
 .cajas{
-	float: left;
-	width: 30%;
-	margin-top: 20px;
-	margin-right: 10px;
-	margin-bottom: 20px;
-	margin-left: 23px;
-	background-color: #000;	/*border:solid green 1px;*/
-	color: #FFF;
-	background-image: url();
+	float: left; /* Flota cada caja a la izquierda para ponerlas en fila */
+	width: 30%; /* Cada caja ocupa el 30% del ancho del contenedor */
+	margin-top: 20px; /* Margen superior de 20px */
+	margin-right: 10px; /* Margen derecho de 10px, separa las cajas entre sí */
+	margin-bottom: 20px; /* Margen inferior de 20px */
+	margin-left: 23px; /* Margen izquierdo de 23px */
+	background-color: #000; /* Fondo negro para cada caja */
+	/*border:solid green 1px;*/ /* Borde comentado: era para debug visual */
+	color: #FFF; /* Color de texto blanco */
+	background-image: url(); /* Imagen de fondo de la caja (poner ruta entre paréntesis) */
 	}
+
+/* ==============================================
+   .CAJAS IMG - Imágenes dentro de las cajas
+   ============================================== */
+.cajas img {
+	width: 100%; /* La imagen ocupa el 100% del ancho de la caja */
+	height: auto; /* Altura automática, mantiene la proporción */
+	display: block; /* Muestra la imagen como bloque, evita espacios debajo */
+	}
+
+/* ==============================================
+   P - Estilo de todos los párrafos
+   ============================================== */
 p {
-	font-family: "Times New Roman", Times, serif;
-	font-size: 12px;
-	color: #FFF;
-	text-align: justify;
-	margin-right: 5px;
-	margin-left: 5px;
-	line-height: 30px;
+	font-family: "Times New Roman", Times, serif; /* Fuente Times New Roman (serif) */
+	font-size: 12px; /* Tamaño de letra de 12 píxeles */
+	color: #FFF; /* Color de texto blanco */
+	text-align: justify; /* Texto justificado (alineado a ambos lados) */
+	margin-right: 5px; /* Margen derecho de 5px */
+	margin-left: 5px; /* Margen izquierdo de 5px */
+	line-height: 30px; /* Interlineado (espacio entre líneas) de 30px */
 }
+
+/* ==============================================
+   H3 - Títulos de cada caja
+   ============================================== */
 h3 {
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 18px;
-	color: #F00;
-	text-align: center;
-	text-transform: uppercase;
-	margin-bottom: 60px;
-	margin-top:20;
+	font-family: Tahoma, Geneva, sans-serif; /* Fuente Tahoma, con alternativas sans-serif */
+	font-size: 18px; /* Tamaño de letra de 18 píxeles */
+	color: #F00; /* Color de texto rojo (#F00 = #FF0000) */
+	text-align: center; /* Texto centrado horizontalmente */
+	text-transform: uppercase; /* Convierte el texto a mayúsculas */
+	margin-bottom: 60px; /* Margen inferior de 60px, separa el título del párrafo */
+	margin-top:20; /* Margen superior de 20 píxeles */
 }
+
+/* ==============================================
+   #PIE - Pie de página (opcional)
+   ============================================== */
 #pie {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-weight: 100;
-	color: #FFF;
-	background-color: #000;
-	text-align: center;
-	line-height: 30px;
-	vertical-align: middle;
-	height: 40px;
+	font-family: Arial, Helvetica, sans-serif; /* Fuente Arial, con alternativas sans-serif */
+	font-size: 16px; /* Tamaño de letra de 16 píxeles */
+	font-weight: 100; /* Grosor de fuente muy fino (100 = thin) */
+	color: #FFF; /* Color de texto blanco */
+	background-color: #000; /* Fondo negro */
+	text-align: center; /* Texto centrado horizontalmente */
+	line-height: 30px; /* Interlineado de 30px, ayuda a centrar verticalmente */
+	vertical-align: middle; /* Alineación vertical al medio */
+	height: 40px; /* Alto fijo de 40 píxeles */
 }
